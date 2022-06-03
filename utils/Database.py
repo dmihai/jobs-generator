@@ -31,3 +31,21 @@ class Database:
             ))
 
         self._conn.commit()
+
+    def get_trading_costs(self):
+        cursor = self._conn.cursor()
+
+        query = "SELECT asset, cost\
+            FROM trading_cost"
+        cursor.execute(query)
+
+        results = cursor.fetchall()
+
+        if results is None:
+            return None
+
+        costs = {}
+        for row in results:
+            costs[row[0]] = row[1]
+
+        return costs
