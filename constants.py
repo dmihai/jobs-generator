@@ -27,4 +27,4 @@ all_assets = ['EURUSD', 'EURCHF', 'EURGBP', 'EURJPY',
               'USDTRY', 'USDZAR', 'WTIUSD', 'XAGUSD',
               'ZARJPY']
 
-years = [2019, 2020, 2021, 2022]
+years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
