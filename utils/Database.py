@@ -12,40 +12,21 @@ class Database:
                                              user=db_user,
                                              password=db_pass)
 
-    def insert_jobs(self, strategy, strategy_version, jobs):
+    def insert_jobs(self, strategy, version, jobs):
         cursor = self._conn.cursor()
 
         query = "INSERT INTO jobs\
-            (status, asset, year, timeframe, strategy, strategy_version, params)\
-            VALUES (%s, %s, %s, %s, %s, %s, %s)"
+            (status, asset, year, timeframe, strategy, version, params)\
+            VALUES ('idle', %s, %s, %s, %s, %s, %s)"
 
         for job in jobs:
             cursor.execute(query, (
-                'idle',
                 job['asset'],
                 job['year'],
                 job['timeframe'],
                 strategy,
-                strategy_version,
+                version,
                 job['params']
             ))
 
         self._conn.commit()
-
-    def get_trading_costs(self):
-        cursor = self._conn.cursor()
-
-        query = "SELECT asset, cost\
-            FROM trading_cost"
-        cursor.execute(query)
-
-        results = cursor.fetchall()
-
-        if results is None:
-            return None
-
-        costs = {}
-        for row in results:
-            costs[row[0]] = row[1]
-
-        return costs

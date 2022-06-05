@@ -1,5 +1,15 @@
 default_trading_cost = 0.0005
 
+common_assets = ['EURUSD', 'EURCHF', 'EURGBP', 'EURJPY',
+                 'EURAUD', 'USDCAD', 'USDCHF', 'USDJPY',
+                 'GBPCHF', 'GBPJPY', 'GBPUSD', 'AUDJPY',
+                 'AUDUSD', 'CHFJPY', 'NZDJPY', 'NZDUSD',
+                 'XAUUSD', 'AUDCAD', 'AUDCHF', 'AUDNZD',
+                 'CADCHF', 'CADJPY', 'EURCAD', 'EURCZK',
+                 'EURDKK', 'EURNZD', 'GBPAUD', 'GBPCAD',
+                 'GBPNZD', 'NZDCAD', 'NZDCHF', 'SGDJPY',
+                 'USDDKK', 'USDHKD', 'USDSGD', 'ZARJPY']
+
 all_assets = ['EURUSD', 'EURCHF', 'EURGBP', 'EURJPY',
               'EURAUD', 'USDCAD', 'USDCHF', 'USDJPY',
               'USDMXN', 'GBPCHF', 'GBPJPY', 'GBPUSD',
