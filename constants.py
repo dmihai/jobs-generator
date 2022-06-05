@@ -1,5 +1,3 @@
-default_trading_cost = 0.0005
-
 common_assets = ['EURUSD', 'EURCHF', 'EURGBP', 'EURJPY',
                  'EURAUD', 'USDCAD', 'USDCHF', 'USDJPY',
                  'GBPCHF', 'GBPJPY', 'GBPUSD', 'AUDJPY',
